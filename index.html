@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청춘여정 - 당신의 두 번째 청춘을 응원합니다</title>
+    <style>
+        /* 기본 설정: 시니어층을 고려하여 기본 폰트 크기를 키우고 가독성을 높입니다. */
+        :root {
+            --primary-color: #2C5282; /* 신뢰감을 주는 짙은 파란색 */
+            --secondary-color: #ED8936; /* 따뜻하고 활기찬 오렌지색 */
+            --background-color: #F7FAFC;
+            --text-color: #2D3748;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 18px; /* 기본 폰트 크기 확대 */
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 헤더 영역 */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        /* 메인 배너 영역 */
+        .hero {
+            background: linear-gradient(rgba(44, 82, 130, 0.8), rgba(44, 82, 130, 0.8)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 추천 여행지 섹션 */
+        .tour-section {
+            padding: 4rem 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        /* 여행 상품 그리드 (반응형) */
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* 여행 상품 카드 */
+        .tour-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tour-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .tour-content {
+            padding: 1.5rem;
+        }
+
+        .tour-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .tour-title {
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            font-weight: bold;
+        }
+
+        .tour-info {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            color: #4A5568;
+        }
+
+        .tour-info li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .tour-price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-align: right;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 1rem;
+        }
+
+        /* 하단 푸터 */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌅 청춘여정</h1>
+        <div style="font-size: 1.2rem; font-weight: bold; color: var(--secondary-color);">
+            상담전화: 1588-0000
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>수고하신 당신, 이제 떠나세요!</h2>
+        <p>은퇴 후 여유로운 삶을 위한 프리미엄 맞춤 여행. 걷기 편하고 식사가 훌륭한 코스만 엄선했습니다.</p>
+    </section>
+
+    <section class="tour-section">
+        <h2 class="section-title">이번 달 강력 추천 여행지</h2>
+        
+        <div class="tour-grid">
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1582200445698-4444585145ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="제주도" class="tour-image">
+                <div class="tour-content">
+                    <span class="tour-tag">국내 힐링</span>
+                    <h3 class="tour-title">제주 프리미엄 미식 & 온천 여행</h3>
+                    <ul class="tour-info">
+                        <li><strong>일정:</strong> 3박 4일 (여유로운 오후 출발)</li>
+                        <li><strong>숙소:</strong> 서귀포 5성급 호텔 (온천 포함)</li>
+                        <li><strong>특징:</strong> 쇼핑 강요 없음, 해산물 정식 특식</li>
+                    </ul>
+                    <div class="tour-price">850,000원 ~</div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="일본 교토" class="tour-image">
+                <div class="tour-content">
+                    <span class="tour-tag">근거리 해외</span>
+                    <h3 class="tour-title">일본 큐슈 유후인 료칸 휴양</h3>
+                    <ul class="tour-info">
+                        <li><strong>일정:</strong> 2박 3일</li>
+                        <li><strong>숙소:</strong> 유후인 전통 프리미엄 료칸</li>
+                        <li><strong>특징:</strong> 전 일정 가이드 동행, 가이세키 요리</li>
+                    </ul>
+                    <div class="tour-price">1,450,000원 ~</div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="스위스" class="tour-image">
+                <div class="tour-content">
+                    <span class="tour-tag">버킷 리스트</span>
+                    <h3 class="tour-title">스위스 알프스 파노라마 기차여행</h3>
+                    <ul class="tour-info">
+                        <li><strong>일정:</strong> 7박 9일</li>
+                        <li><strong>숙소:</strong> 알프스 뷰 4성급 호텔 연박 (짐 이동 최소화)</li>
+                        <li><strong>특징:</strong> 많이 걷지 않는 프리미엄 산악 열차 탑승</li>
+                    </ul>
+                    <div class="tour-price">5,200,000원 ~</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>주식회사 청춘여정 | 대표자: 홍길동 | 사업자등록번호: 123-45-67890</p>
+        <p>서울특별시 강남구 테헤란로 123 | 이메일: hello@youthjourney.com</p>
+        <p style="margin-top: 1rem; color: #A0AEC0; font-size: 0.9rem;">© 2026 Youth Journey. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
